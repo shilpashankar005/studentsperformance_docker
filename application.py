@@ -33,8 +33,10 @@ def predict_datapoint():
         print(pred_df)
 
         predict_pipeline=predictPipeline()
-        results= predict_pipeline.predicts(pred_df)
-        return render_template('home.html',results=results[0])
+        # results= predict_pipeline.predicts(pred_df)
+        results,model_path,model= predict_pipeline.predicts(pred_df)
+        # return render_template('home.html',results=results[0])
+        return render_template('home.html',results=results[0],model_path=model_path,model=model)
 
 if __name__=="__main__":
     app.run(host="0.0.0.0") #removed debug=True for deployment,it shouldn't be TRue
