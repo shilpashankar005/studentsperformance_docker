@@ -39,4 +39,4 @@ def predict_datapoint():
         return render_template('home.html',results=results[0],model_path=model_path,model=model)
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0") #removed debug=True for deployment,it shouldn't be TRue
+    app.run(host="0.0.0.0",debug=True) #removed debug=True for deployment,it shouldn't be TRue
