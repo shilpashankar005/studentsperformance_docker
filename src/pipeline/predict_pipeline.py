@@ -13,14 +13,11 @@ class predictPipeline:
             # preprocessor_path=r'C:\\Users\\shilp\\Study\\Interview_Prep\\mlprojects\\src\\Components\\artifacts\\preprocessor.pkl'
             model_path='src//Components//artifacts//model.pkl'
             preprocessor_path='src//Components//artifacts//preprocessor.pkl'
-            print("path of model pickle: ")
-            print(model_path)
             model=load_object(file_path=model_path)
             preprocessor=load_object(file_path=preprocessor_path)
             data_scaled=preprocessor.transform(features)
             preds=model.predict(data_scaled)
-            # return preds
-            return (preds,model_path,model)
+            return preds
         
         except Exception as e:
             raise CustomException(e,sys)
