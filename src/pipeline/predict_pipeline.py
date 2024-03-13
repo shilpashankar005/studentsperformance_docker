@@ -11,8 +11,8 @@ class predictPipeline:
         try:
             # model_path=r'C:\\Users\\shilp\\Study\\Interview_Prep\\mlprojects\\src\\Components\\artifacts\\model.pkl'
             # preprocessor_path=r'C:\\Users\\shilp\\Study\\Interview_Prep\\mlprojects\\src\\Components\\artifacts\\preprocessor.pkl'
-            model_path='src//Components//artifacts//model.pkl'
-            preprocessor_path='src//Components//artifacts//preprocessor.pkl'
+            model_path=r'src\\Components\\artifacts\\model.pkl'
+            preprocessor_path=r'src\\Components\\artifacts\\preprocessor.pkl'
             print("path of model pickle: ")
             print(model_path)
             model=load_object(file_path=model_path)
